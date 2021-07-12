@@ -5,25 +5,20 @@ import java.math.RoundingMode;
 public class Main {
     public static void main(String[] args) {
         BigDecimal intInvest;
-        BigDecimal interest;
-        int years;
         BigDecimal deposit;
+        BigDecimal interest;
         BigDecimal finalValue;
         BigDecimal gains;
-        String string;
+        int years;
         Scanner scan = new Scanner(System.in);
 
         System.out.println("How much would you like to invest?");
-        string = scan.next();
-        intInvest = new BigDecimal(string);
+        intInvest = new BigDecimal(scan.next());
         finalValue = intInvest;
         System.out.println("How much more will you deposit every year?");
-        string = scan.next();
-        deposit = new BigDecimal(string);
+        deposit = new BigDecimal(scan.next());
         System.out.println("What is your expected yearly interest rate (%)?");
-        string = scan.next();
-        interest = new BigDecimal(string);
-        interest = (interest.divide(new BigDecimal(100))).add(new BigDecimal(1));
+        interest = ((new BigDecimal(scan.next())).divide(new BigDecimal(100))).add(new BigDecimal(1));
         System.out.println("How many years will you grow this investment?");
         years = Integer.parseInt(scan.next());
 
