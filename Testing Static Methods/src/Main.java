@@ -1,7 +1,7 @@
 public class Main {
     static double absValue(double num){
-        if(num < 0){
-            num -= num + num;
+        if (num < 0) {
+            num = -num;
         }
         return num;
     }
@@ -9,9 +9,9 @@ public class Main {
         double low = 0;
         double high = num;
         double mid = (high + low)/2;
-        while(absValue(mid*mid - num) > 0.0001){
-            mid = (high + low)/2;
-            if(mid*mid > num){
+        while (!(mid * mid - num == 0)) {
+            mid = (high + low) / 2;
+            if (mid * mid > num) {
                 high = mid;
             } else {
                 low = mid;
