@@ -7,7 +7,6 @@ public class Main {
             fib[i] = fib[i - 1] + fib[i - 2];
         }
             return fib[num];
-
     }
 
     public static void main(String[] args) {
